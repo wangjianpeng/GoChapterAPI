@@ -1,0 +1,342 @@
+{
+    "data": {
+        "product_shelves": [
+            {
+                "shelf_type": 3,
+                "title": "TestUGC",
+                "sort": 1,
+                "desc": "Test UGC Shelf",
+                "product_ids": [
+                    16000,
+                    16001,
+                    16002
+                ],
+                "shelf_id": 161
+            }
+        ],
+        "products": [
+            {
+                "product_id": 16000,
+                "product_type": 4,
+                "ios_charge_code": "com.mars.avgchapters.ios.12dd",
+                "android_charge_code": "com.mars.avgchapters.12dd",
+                "currency_type": "star",
+                "product_count": 10,
+                "origin_product_count": 5,
+                "product_desc": "12 dd star",
+                "product_content": "16000*10",
+                "label_image_id": 7,
+                "product_image_id": 1,
+                "label_image_address": "http:\/\/cdnoss.stardustgod.com\/chapters\/image\/202010\/5f87c0cddb04e.png",
+                "label_image_md5": "afe7de8e46f545b6274503b860a56d4f",
+                "label_image_size": 3899,
+                "goods_image_address": "http:\/\/cdnoss.stardustgod.com\/chapters\/image\/202012\/5fd1f01f98cf5.png",
+                "goods_image_md5": "c7d3a34f6f3cf3adee8f9e5b6667af37",
+                "goods_image_size": 4935
+            },
+            {
+                "product_id": 16001,
+                "product_type": 4,
+                "ios_charge_code": "com.mars.avgchapters.ios.5tt",
+                "android_charge_code": "com.mars.avgchapters.5tt",
+                "currency_type": "star",
+                "product_count": 20,
+                "origin_product_count": 15,
+                "product_desc": "5 tt star",
+                "product_content": "16001*20",
+                "label_image_id": 5,
+                "product_image_id": 8,
+                "label_image_address": "http:\/\/cdnoss.stardustgod.com\/chapters\/image\/202007\/5f097e5fd3610.png",
+                "label_image_md5": "163b4e48fbbe5c83045981ac6ebf54c0",
+                "label_image_size": 9940,
+                "goods_image_address": "http:\/\/cdnoss.stardustgod.com\/chapters\/image\/202012\/5fd1f09344dff.png",
+                "goods_image_md5": "98a0b12ee6880cabd02e6edfe6aa59f3",
+                "goods_image_size": 11605
+            },
+            {
+                "product_id": 16002,
+                "product_type": 4,
+                "ios_charge_code": "com.mars.avgchapters.ios.250dd",
+                "android_charge_code": "com.mars.avgchapters.250dd",
+                "currency_type": "star",
+                "product_count": 60,
+                "origin_product_count": 50,
+                "product_desc": "250 dd star",
+                "product_content": "16002*60",
+                "label_image_id": 4,
+                "product_image_id": 4,
+                "label_image_address": "http:\/\/cdnoss.stardustgod.com\/chapters\/image\/202007\/5f097e5009962.png",
+                "label_image_md5": "5f5a208fb80d3aafe6ecaebf61ca2de0",
+                "label_image_size": 10795,
+                "goods_image_address": "http:\/\/cdnoss.stardustgod.com\/chapters\/image\/202012\/5fd1f05182a49.png",
+                "goods_image_md5": "ff92c8530a163594845466d3d22461e1",
+                "goods_image_size": 11636
+            }
+        ],
+        "charge_points": {
+            "com.mars.avgchapters.ios.60dd": {
+                "platform": "ios",
+                "charge_code": "com.mars.avgchapters.ios.60dd",
+                "price": 4.99
+            },
+            "com.mars.avgchapters.250dd": {
+                "platform": "android",
+                "charge_code": "com.mars.avgchapters.250dd",
+                "price": 19.99
+            },
+            "com.mars.avgchapters.extralargepackage": {
+                "platform": "android",
+                "charge_code": "com.mars.avgchapters.extralargepackage",
+                "price": 19.99
+            },
+            "com.mars.avgchapters.ios_0.99daypass": {
+                "platform": "ios",
+                "charge_code": "com.mars.avgchapters.ios_0.99daypass",
+                "price": 0.99
+            },
+            "com.mars.avgchapters.550dd": {
+                "platform": "android",
+                "charge_code": "com.mars.avgchapters.550dd",
+                "price": 39.99
+            },
+            "com.mars.avgchapters.12dd": {
+                "platform": "android",
+                "charge_code": "com.mars.avgchapters.12dd",
+                "price": 1.99
+            },
+            "com.mars.avgchapters_daypass": {
+                "platform": "android",
+                "charge_code": "com.mars.avgchapters_daypass",
+                "price": 0.99
+            },
+            "com.mars.avgchapters.ios.150tt": {
+                "platform": "ios",
+                "charge_code": "com.mars.avgchapters.ios.150tt",
+                "price": 39.99
+            },
+            "com.mars.avgchapters_0.99ad": {
+                "platform": "android",
+                "charge_code": "com.mars.avgchapters_0.99ad",
+                "price": 0.99
+            },
+            "com.mars.avgchapters.ios.Some_diamonds_0.99": {
+                "platform": "ios",
+                "charge_code": "com.mars.avgchapters.ios.Some_diamonds_0.99",
+                "price": 0.99
+            },
+            "com.mars.avgchapters.ios.5tt": {
+                "platform": "ios",
+                "charge_code": "com.mars.avgchapters.ios.5tt",
+                "price": 1.99
+            },
+            "com.mars.avgchapters.ios.discount_diamonds_49.99": {
+                "platform": "ios",
+                "charge_code": "com.mars.avgchapters.ios.discount_diamonds_49.99",
+                "price": 49.99
+            },
+            "com.mars.avgchapters.tinypackage": {
+                "platform": "android",
+                "charge_code": "com.mars.avgchapters.tinypackage",
+                "price": 0.99
+            },
+            "com.mars.avgchapters.extarlargepackage": {
+                "platform": "android",
+                "charge_code": "com.mars.avgchapters.extarlargepackage",
+                "price": 19.99
+            },
+            "com.mars.avgchapters.ios_mediumpackage": {
+                "platform": "ios",
+                "charge_code": "com.mars.avgchapters.ios_mediumpackage",
+                "price": 4.99
+            },
+            "com.mars.avgchapters.1500dd": {
+                "platform": "android",
+                "charge_code": "com.mars.avgchapters.1500dd",
+                "price": 99.99
+            },
+            "com.mars.avgchapters.some_diamonds_0.99": {
+                "platform": "android",
+                "charge_code": "com.mars.avgchapters.some_diamonds_0.99",
+                "price": 0.99
+            },
+            "com.mars.avgchapters.package002": {
+                "platform": "android",
+                "charge_code": "com.mars.avgchapters.package002",
+                "price": 4.99
+            },
+            "com.mars.avgchapters.ios_largepackage": {
+                "platform": "ios",
+                "charge_code": "com.mars.avgchapters.ios_largepackage",
+                "price": 9.99
+            },
+            "com.mars.avgchapters.ios_extralargepackage": {
+                "platform": "ios",
+                "charge_code": "com.mars.avgchapters.ios_extralargepackage",
+                "price": 19.99
+            },
+            "com.mars.avgchapters.ios_giantpackage": {
+                "platform": "ios",
+                "charge_code": "com.mars.avgchapters.ios_giantpackage",
+                "price": 39.99
+            },
+            "com.mars.avgchapters.ios.550dd": {
+                "platform": "ios",
+                "charge_code": "com.mars.avgchapters.ios.550dd",
+                "price": 39.99
+            },
+            "com.mars.avgchapters.ios.package001": {
+                "platform": "ios",
+                "charge_code": "com.mars.avgchapters.ios.package001",
+                "price": 0.99
+            },
+            "com.mars.avgchapters.ios.1500dd": {
+                "platform": "ios",
+                "charge_code": "com.mars.avgchapters.ios.1500dd",
+                "price": 99.99
+            },
+            "com.mars.avgchapters.chapterpass": {
+                "platform": "android",
+                "charge_code": "com.mars.avgchapters.chapterpass",
+                "price": 9.99
+            },
+            "com.mars.avgchapters.ios_0.99ad": {
+                "platform": "ios",
+                "charge_code": "com.mars.avgchapters.ios_0.99ad",
+                "price": 0.99
+            },
+            "com.mars.avgchapters.ios.discount_tickets_19.99": {
+                "platform": "ios",
+                "charge_code": "com.mars.avgchapters.ios.discount_tickets_19.99",
+                "price": 19.99
+            },
+            "com.mars.avgchapters.discount_diamonds_49.99": {
+                "platform": "android",
+                "charge_code": "com.mars.avgchapters.discount_diamonds_49.99",
+                "price": 49.99
+            },
+            "com.mars.avgchapters.ios.250dd": {
+                "platform": "ios",
+                "charge_code": "com.mars.avgchapters.ios.250dd",
+                "price": 19.99
+            },
+            "com.mars.avgchapters.mediumpackage": {
+                "platform": "android",
+                "charge_code": "com.mars.avgchapters.mediumpackage",
+                "price": 4.99
+            },
+            "com.mars.avgchapters.giantpackage": {
+                "platform": "android",
+                "charge_code": "com.mars.avgchapters.giantpackage",
+                "price": 39.99
+            },
+            "com.mars.avgchapters_diamondcard": {
+                "platform": "android",
+                "charge_code": "com.mars.avgchapters_diamondcard",
+                "price": 9.99
+            },
+            "com.mars.avgchapters.5tt": {
+                "platform": "android",
+                "charge_code": "com.mars.avgchapters.5tt",
+                "price": 1.99
+            },
+            "com.mars.avgchapters.150tt": {
+                "platform": "android",
+                "charge_code": "com.mars.avgchapters.150tt",
+                "price": 39.99
+            },
+            "com.mars.avgchapters.ios_diamondcard": {
+                "platform": "ios",
+                "charge_code": "com.mars.avgchapters.ios_diamondcard",
+                "price": 9.99
+            },
+            "com.mars.avgchapters.ios.package002": {
+                "platform": "ios",
+                "charge_code": "com.mars.avgchapters.ios.package002",
+                "price": 4.99
+            },
+            "com.mars.avgchapters.ios_tinypackage": {
+                "platform": "ios",
+                "charge_code": "com.mars.avgchapters.ios_tinypackage",
+                "price": 0.99
+            },
+            "com.mars.avgchapters.discount_tickets_19.99": {
+                "platform": "android",
+                "charge_code": "com.mars.avgchapters.discount_tickets_19.99",
+                "price": 19.99
+            },
+            "com.mars.avgchapters.30tt": {
+                "platform": "android",
+                "charge_code": "com.mars.avgchapters.30tt",
+                "price": 9.99
+            },
+            "com.mars.avgchapters.60dd": {
+                "platform": "android",
+                "charge_code": "com.mars.avgchapters.60dd",
+                "price": 4.99
+            },
+            "com.mars.avgchapters.largepackage": {
+                "platform": "android",
+                "charge_code": "com.mars.avgchapters.largepackage",
+                "price": 9.99
+            },
+            "com.mars.avgchapters.ios_9.99gift": {
+                "platform": "ios",
+                "charge_code": "com.mars.avgchapters.ios_9.99gift",
+                "price": 9.99
+            },
+            "com.mars.avgchapters.some_diamonds_9.99": {
+                "platform": "android",
+                "charge_code": "com.mars.avgchapters.some_diamonds_9.99",
+                "price": 9.99
+            },
+            "com.mars.avgchapters.ios.30tt": {
+                "platform": "ios",
+                "charge_code": "com.mars.avgchapters.ios.30tt",
+                "price": 9.99
+            },
+            "com.mars.avgchapters.package001": {
+                "platform": "android",
+                "charge_code": "com.mars.avgchapters.package001",
+                "price": 0.99
+            },
+            "com.mars.avgchapters.ios.12dd": {
+                "platform": "ios",
+                "charge_code": "com.mars.avgchapters.ios.12dd",
+                "price": 1.99
+            },
+            "com.mars.avgchapters_9.99gift": {
+                "platform": "android",
+                "charge_code": "com.mars.avgchapters_9.99gift",
+                "price": 9.99
+            },
+            "com.mars.avgchapters.ios.Some_diamonds_9.99": {
+                "platform": "ios",
+                "charge_code": "com.mars.avgchapters.ios.Some_diamonds_9.99",
+                "price": 9.99
+            },
+            "com.mars.avgchapters.ios.Chapterpass": {
+                "platform": "ios",
+                "charge_code": "com.mars.avgchapters.ios.Chapterpass",
+                "price": 9.99
+            },
+            "com.mars.avgchapters.subscribe003": {
+                "charge_code": "com.mars.avgchapters.subscribe003",
+                "platform": "android",
+                "price": 120
+            },
+            "com.mars.avgchapters.chapterpassy": {
+                "charge_code": "com.mars.avgchapters.chapterpassy",
+                "platform": "android",
+                "price": 120
+            },
+            "com.mars.avgchapters.ios.subscribe003": {
+                "charge_code": "com.mars.avgchapters.ios.subscribe003",
+                "platform": "ios",
+                "price": 120
+            }
+        }
+    },
+    "error_code": 1,
+    "error_msg": "success",
+    "error_ver": 1663047901
+}
