@@ -6,6 +6,8 @@ import (
 	"encoding/base64"
 	"encoding/json"
 	"fmt"
+	"io/ioutil"
+	"log"
 	"net/http"
 	"os"
 	"time"
@@ -18,6 +20,11 @@ type ChapterResp struct {
 	Error_Msg  string            `json:"error_msg"`
 	Error_Ver  int               `json:"error_ver"`
 	Data       map[string]string `json:"data"`
+}
+
+type FakeReq struct {
+	Action string `json:"action"`
+	Msg    string `json:"msg"`
 }
 
 func DoPingGin() {
@@ -36,7 +43,44 @@ func DoPingGin() {
 
 	r.POST("/fakepost", func(c *gin.Context) {
 
-		time.Sleep(10 * time.Second)
+		bodydata, err := ioutil.ReadAll(c.Request.Body)
+		if err != nil {
+			log.Println(err.Error())
+		}
+		//base64 decode
+
+		//unzip
+
+		rawDecode1, err := base64.StdEncoding.DecodeString(string(bodydata))
+		if err != nil {
+			log.Println(err.Error())
+		}
+
+		rawDecode1bytes := bytes.NewReader(rawDecode1)
+		reqbodyreader, err := zlib.NewReader(rawDecode1bytes)
+		if err != nil {
+			log.Println(err.Error())
+		}
+
+		reqbodydata, err := ioutil.ReadAll(reqbodyreader)
+		if err != nil {
+			log.Println(err.Error())
+		}
+
+		var fakeReq FakeReq
+		err = json.Unmarshal(reqbodydata, &fakeReq)
+		if err != nil {
+			log.Println(err.Error())
+		}
+		log.Println(fakeReq.Action, "\t", fakeReq.Msg)
+
+		// time.Sleep(10 * time.Second)
+		//strings.Contains(fakeReq.Msg, "ReadChapterPan") ||
+		//|| strings.Contains(fakeReq.Msg, "node callback")
+		// if strings.Contains(fakeReq.Msg, "shop frame") {
+		// 	c.String(http.StatusRequestTimeout, "Time Out!")
+		// 	return
+		// }
 		tempData := map[string]string{}
 
 		tempData["name"] = "wjp"
@@ -54,14 +98,15 @@ func DoPingGin() {
 		w.Write(rtbytes)
 		w.Close()
 		str := base64.StdEncoding.EncodeToString(in.Bytes())
-		fmt.Println(str)
+		// fmt.Println(str)
 		// c.JSON(http.StatusOK, []byte(str))
 		c.Data(http.StatusOK, "application/json", []byte(str))
 		// c.Data(http.StatusOK, gin.MIMEJSON, []byte(str))
 		// c.String(http.StatusOK, "hello world!")
+
 	})
 
-	r.Run(":8180")
+	r.Run("192.168.12.57:8712")
 }
 
 func DoBuildChapterResponseText() {
