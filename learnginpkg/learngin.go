@@ -74,7 +74,7 @@ func DoPingGin() {
 		}
 		log.Println(fakeReq.Action, "\t", fakeReq.Msg)
 
-		// time.Sleep(10 * time.Second)
+		time.Sleep(10 * time.Second)
 		//strings.Contains(fakeReq.Msg, "ReadChapterPan") ||
 		//|| strings.Contains(fakeReq.Msg, "node callback")
 		// if strings.Contains(fakeReq.Msg, "shop frame") {
@@ -106,7 +106,7 @@ func DoPingGin() {
 
 	})
 
-	r.Run("192.168.12.57:8712")
+	r.Run("192.168.12.57:9999")
 }
 
 func DoBuildChapterResponseText() {
