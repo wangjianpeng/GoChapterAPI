@@ -8,11 +8,13 @@ import (
 	"encoding/base64"
 	"encoding/hex"
 	"encoding/json"
+	"errors"
 	"fmt"
 	"io"
 	"io/ioutil"
 	"log"
 	"net/http"
+	"os"
 	"strings"
 	"time"
 	"unicode/utf8"
@@ -262,7 +264,7 @@ func decompressString(str string) (string, error) {
 
 func DoPostWithHeader() {
 	rawstr := "eJwdzD0OgCAMQOG7dHZoKIXi5uQNXA3hR0kMg8pkvLvE9eXleyDsvtZ0rCXCCNMyMyIyDHCVrfq7naln44iz5oRokFBQOycxZKWIyVqRvrf2A0xaEbwfTegXgg=="
-	timeout := time.Duration(5 * time.Second)
+	timeout := time.Duration(2 * time.Second)
 	client := http.Client{
 		Timeout: timeout,
 	}
@@ -287,4 +289,15 @@ func DoPostWithHeader() {
 	}
 
 	log.Println(string(body))
+}
+
+func FileExist(path string) bool {
+	result := false
+	if len(path) > 0 {
+		_, err := os.Stat(path)
+		if !errors.Is(err, os.ErrClosed) {
+			result = true
+		}
+	}
+	return result
 }

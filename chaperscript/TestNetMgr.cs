@@ -4,6 +4,9 @@ using StarMatrix;
 
 namespace StardustChapter
 {
+    //     --CS.StardustChapter.TestNetMgr.Ins:DoFakePost("fakepost","block activity",function()
+    // --    self:setBookCover()
+    // --end)
     public class TestNetMgr : Singleton<TestNetMgr>
     {
         private NetWorkLoad mNetWorkLoad;

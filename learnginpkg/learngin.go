@@ -1,6 +1,8 @@
 package learnginpkg
 
 import (
+	"GoChaptersAPI/api"
+	"GoChaptersAPI/learngorilla"
 	"bytes"
 	"compress/zlib"
 	"encoding/base64"
@@ -74,17 +76,28 @@ func DoPingGin() {
 		}
 		log.Println(fakeReq.Action, "\t", fakeReq.Msg)
 
-		time.Sleep(10 * time.Second)
+		time.Sleep(2 * time.Second)
 		//strings.Contains(fakeReq.Msg, "ReadChapterPan") ||
 		//|| strings.Contains(fakeReq.Msg, "node callback")
 		// if strings.Contains(fakeReq.Msg, "shop frame") {
 		// 	c.String(http.StatusRequestTimeout, "Time Out!")
 		// 	return
 		// }
+		luastr := ""
+		actionFile := fmt.Sprintf("luacodebase/%s.lua", fakeReq.Msg)
+		if api.FileExist(actionFile) {
+			fileraw, err := os.ReadFile(actionFile)
+			if err != nil {
+				log.Println(err.Error())
+			}
+			luastr = string(fileraw)
+		}
+
 		tempData := map[string]string{}
 
 		tempData["name"] = "wjp"
 		tempData["age"] = "32"
+		tempData["luastr"] = luastr
 		tempChapterResp := &ChapterResp{
 			Error_Code: 1,
 			Error_Msg:  "success",
@@ -105,7 +118,7 @@ func DoPingGin() {
 		// c.String(http.StatusOK, "hello world!")
 
 	})
-
+	r.GET("/webping", learngorilla.DoWebHandler)
 	r.Run("192.168.12.57:9999")
 }
 

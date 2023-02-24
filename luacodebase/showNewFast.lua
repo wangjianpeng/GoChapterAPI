@@ -1,0 +1,1 @@
+Router.Navigate("/v1/Shop/NewbieShopQuick")
