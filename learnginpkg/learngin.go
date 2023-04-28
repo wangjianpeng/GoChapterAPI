@@ -1,7 +1,6 @@
 package learnginpkg
 
 import (
-	"GoChaptersAPI/api"
 	"GoChaptersAPI/learngorilla"
 	"bytes"
 	"compress/zlib"
@@ -68,36 +67,39 @@ func DoPingGin() {
 		if err != nil {
 			log.Println(err.Error())
 		}
-
+		fmt.Println("req :", string(reqbodydata))
 		var fakeReq FakeReq
 		err = json.Unmarshal(reqbodydata, &fakeReq)
 		if err != nil {
-			log.Println(err.Error())
+			log.Println("can't unmarshal req body: ", err.Error())
+		} else {
+			DoPrintData(reqbodydata)
 		}
+
 		log.Println(fakeReq.Action, "\t", fakeReq.Msg)
 
-		time.Sleep(2 * time.Second)
+		time.Sleep(5 * time.Second)
 		//strings.Contains(fakeReq.Msg, "ReadChapterPan") ||
 		//|| strings.Contains(fakeReq.Msg, "node callback")
 		// if strings.Contains(fakeReq.Msg, "shop frame") {
 		// 	c.String(http.StatusRequestTimeout, "Time Out!")
 		// 	return
 		// }
-		luastr := ""
-		actionFile := fmt.Sprintf("luacodebase/%s.lua", fakeReq.Msg)
-		if api.FileExist(actionFile) {
-			fileraw, err := os.ReadFile(actionFile)
-			if err != nil {
-				log.Println(err.Error())
-			}
-			luastr = string(fileraw)
-		}
+		// luastr := ""
+		// actionFile := fmt.Sprintf("luacodebase/%s.lua", fakeReq.Msg)
+		// if api.FileExist(actionFile) {
+		// 	fileraw, err := os.ReadFile(actionFile)
+		// 	if err != nil {
+		// 		log.Println(err.Error())
+		// 	}
+		// 	luastr = string(fileraw)
+		// }
 
 		tempData := map[string]string{}
 
 		tempData["name"] = "wjp"
 		tempData["age"] = "32"
-		tempData["luastr"] = luastr
+		// tempData["luastr"] = luastr
 		tempChapterResp := &ChapterResp{
 			Error_Code: 1,
 			Error_Msg:  "success",
@@ -119,7 +121,7 @@ func DoPingGin() {
 
 	})
 	r.GET("/webping", learngorilla.DoWebHandler)
-	r.Run("192.168.12.57:9999")
+	r.Run("192.168.19.52:14500")
 }
 
 func DoBuildChapterResponseText() {
@@ -229,5 +231,19 @@ func DoReadFileByte(path string) []byte {
 			fmt.Println(err)
 		}
 		return b
+	}
+}
+
+func DoPrintData(dataBytes []byte) {
+	var geneData map[string]interface{}
+	err := json.Unmarshal(dataBytes, &geneData)
+	if err != nil {
+		log.Println("can't unmarshal:", err.Error())
+	} else {
+		// price, ok := geneData["price"]
+		// if ok {
+		// 	fmt.Println(price)
+		// }
+		fmt.Printf("print data format:\n\t%#v\n", geneData)
 	}
 }

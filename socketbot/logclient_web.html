@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>WebSocket Example</title>
+  </head>
+  <body>
+    <form>
+      <input type="text" id="input" />
+      <button type="submit">Send</button>
+    </form>
+    <div id="messages"></div>
+    <script>
+      const url = "ws://localhost:14660/ws";
+      const clientType = "web:"
+      const ws = new WebSocket(url);
+      ws.onopen = () => {
+        console.log("WebSocket opened");
+        // ws.send(JSON.stringify({ client_type: clientType}))
+        ws.send("client_type:web")
+      };
+
+      ws.onmessage = (evt) => {
+        const messages = document.querySelector("#messages");
+        const message = evt.data;
+        const messageEl = document.createElement("div");
+        messageEl.innerText = message;
+        messages.appendChild(messageEl);
+      };
+
+      const form = document.querySelector("form");
+      form.addEventListener("submit", (evt) => {
+        evt.preventDefault();
+        const input = document.getElementById("input");
+        const message = input.value;
+        input.value = "";
+        ws.send(message);
+      });
+    </script>
+  </body>
+</html>

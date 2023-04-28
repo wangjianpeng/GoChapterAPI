@@ -1,7 +1,7 @@
 package main
 
 import (
-	"GoChaptersAPI/mastergo"
+	"GoChaptersAPI/socketbot"
 )
 
 func main() {
@@ -11,5 +11,9 @@ func main() {
 	// learngorilla.DoRunWebSocketServer()
 	// learnginpkg.DoBuildChapterResponseText()
 	// fmt.Println(learnginpkg.DoReadFile("./files/ugcshop.json"))
-	mastergo.DoRunChannel()
+	// mastergo.DoRunChannel()
+	// socketbot.HelloTest()
+	// socketbot.InputWebPage()
+	// socketbot.LogHtmlWebSocket()
+	socketbot.MutipleServe()
 }

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Text Input and Button</title>
+    <style>
+      #myText {
+        width: 480px;
+        height: 640px;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" id="myText" placeholder="Enter text here">
+    <button onclick="sendText()">Send</button>
+
+    <script>
+      function sendText() {
+        var text = document.getElementById("myText").value;
+        // Send the text to the server
+        fetch("/send", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({ text: text })
+        }).then(function(response) {
+          return response.text();
+        }).then(function(text) {
+        //   alert(text);
+        });
+      }
+    </script>
+  </body>
+</html>

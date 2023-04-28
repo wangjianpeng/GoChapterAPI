@@ -2,10 +2,7 @@ module GoChaptersAPI
 
 go 1.17
 
-require (
-	github.com/gin-gonic/gin v1.8.1
-	github.com/sqs/goreturns v0.0.0-20181028201513-538ac6014518
-)
+require github.com/gin-gonic/gin v1.8.1
 
 require (
 	github.com/gin-contrib/sse v0.1.0 // indirect

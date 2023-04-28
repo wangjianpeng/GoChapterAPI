@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Text Input and Button</title>
+    <style>
+        #myText {
+            width: 480px;
+            height: 640px;
+        }
+    </style>
+  </head>
+  <body>
+    <input type="text" id="myText" placeholder="Enter text here"/>
+    <button onclick="sendText()">Send</button>
+
+    <script>
+      function sendText() {
+        var text = document.getElementById("myText").value;
+        // Add your code here to send the text
+        alert("Text sent: " + text);
+      }
+    </script>
+  </body>
+</html>
